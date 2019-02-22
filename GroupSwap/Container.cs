@@ -10,19 +10,19 @@ namespace GroupSwap
 
         public static List<StudentCurrentState> NewStudentStates { get; set; }
 
-        //sve trenutne grupe u kojima se nalazi student (na svim aktivnostima) - za provjeru preklapanja
+        //all curent student groups (on all activities) - for overlaps check
         public static Dictionary<ulong, List<ulong>> StudentGroups { get; set; }
 
-        //broj ukupnih trazenih zamjena i broj izvrsenih (prvi param trazene, drugi izvrsene)
+        //count of wanted and made swaps 
         public static Dictionary<ulong, int[]> StudentSwaps { get; set; }
 
-        //trenutna grupa studenta na odredjenoj aktivnosti
+        //current student group on specific activity
         public static Dictionary<Tuple<ulong, ulong>, ulong> StudentActivityGroups { get; set; }
 
-        //zeljene grupe studenta na odr aktivnosti
+        //wanted groups on specific activity
         public static Dictionary<Tuple<ulong, ulong>, List<ulong>> StudentActivityRequestedGroups { get; set; }
 
-        //broj requestova za ulazak u odredjenu grupu i oznaka za min_max pref
+        //number of all requests made for specific group 
         public static Dictionary<ulong, int[]> GroupRequests { get; set; } 
 
         public static List<Request> Requests { get; set; }
